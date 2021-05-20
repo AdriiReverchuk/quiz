@@ -1,6 +1,7 @@
 export interface ModelInterface {
 	getData: () => AnswersMainInterface[];
 }
+
 export interface DataInterface {
 	id: number;
 	title: string;
