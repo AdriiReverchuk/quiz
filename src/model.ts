@@ -1,6 +1,7 @@
 export interface ModelInterface {
    getData: () => AnswersMainInterface[];
 }
+
 export interface DataInterface {
    id: number;
    title: string;
@@ -27,23 +28,23 @@ export class Questions {
       this.questions = [
          {
             id: 1,
-            title: "How many legs has cat?",
+            title: "How many legs has an cat?",
             imageUrl: "https://cats.com",
          },
          {
             id: 2,
-            title: "How many legs has dog?",
-            imageUrl: "https://cats.com",
+            title: "How many legs has an dog?",
+            imageUrl: "https://dogs.com",
          },
          {
             id: 3,
-            title: "How many legs has dinosaurs?",
-            imageUrl: "https://cats.com",
+            title: "How many legs has a dinosaurs?",
+            imageUrl: "https://dinosaurs.com",
          },
          {
             id: 4,
-            title: "How many legs has elephant?",
-            imageUrl: "https://cats.com",
+            title: "How many legs has an elephant?",
+            imageUrl: "https://elephants.com",
          },
       ];
    }
