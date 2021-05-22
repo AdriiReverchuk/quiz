@@ -60,25 +60,25 @@ export class Model {
 			question1: [
 				{
 					id: 1,
-					title: "How many",
+					title: "The cat has four legs",
 					image: "./cat_2.jpg",
 					isRight: true,
 				},
 				{
 					id: 2,
-					title: "How many",
-					image: "cat_2.jpg",
+					title: "The cat has two legs",
+					image: "./cat_2.jpg",
 					isRight: false,
 				},
 				{
 					id: 3,
-					title: "How many",
+					title: "The cat has not a legs",
 					image: "cat.jpg",
 					isRight: false,
 				},
 				{
 					id: 4,
-					title: "How many",
+					title: "The cat has no paws",
 					image: "./cat.jpg",
 					isRight: false,
 				},

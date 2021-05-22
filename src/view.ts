@@ -4,13 +4,15 @@ import { AnswersMainInterface } from "./model";
 export class View {
 	container: HTMLElement;
 	containerQuestions: HTMLElement;
+	containerCorrectAnswer: HTMLElement;
 	containerAnswers: HTMLElement;
 	constructor() {
 		this.container = this.createElement("div", "container");
-		this.containerQuestions = this.createElement("div", "container-questions alert alert-success mt-5");
+		this.containerQuestions = this.createElement("div", "container-questions alert alert-primary mt-5");
+		this.containerCorrectAnswer = this.createElement("div", "container-correct")
 		this.containerAnswers = this.createElement("div", "container-answers");
 		document.body.append(this.container);
-		this.container.append(this.containerQuestions, this.containerAnswers);
+		this.container.append(this.containerQuestions, this.containerCorrectAnswer, this.containerAnswers);
 	}
 	// renderTastks(arr: any) {
 	// 	arr.forEach((data: DataInterface) => {
@@ -41,7 +43,27 @@ export class View {
 			img.setAttribute("alt", `picture`);
 			answersDiv.append(titleBox, img)
 			this.getElement(".container-answers")?.append(answersDiv);
-		}
+
+			answersDiv.addEventListener("click", (event) => {
+				const arrayQuestion = document.querySelectorAll(".answerTrue");
+                if (arrayQuestion) {
+                    for (let i = 0; i < arrayQuestion.length; i++) {
+                	    arrayQuestion[i].remove();
+                    };
+                };
+				if (data.question1[i].isRight === true) {
+					const answerTrue = this.createElement("div", "answerTrue alert alert-success fs-3");
+					const titleAnswer = this.createElement("p", "titleAnswer", "You have guessed !");
+					answerTrue.append(titleAnswer);
+					this.getElement(".container-correct")?.append(answerTrue);
+				} else {
+					const answerTrue = this.createElement("div", "answerTrue alert alert-danger fs-4");
+					const titleAnswer = this.createElement("p", "titleAnswer", "The answer is not true !");
+					answerTrue.append(titleAnswer);
+					this.getElement(".container-correct")?.append(answerTrue);
+				};
+			});
+		};
 	}
 	createElement = (tag: string, cl?: string, text?: string) => {
 		const element: HTMLElement = document.createElement(tag);
