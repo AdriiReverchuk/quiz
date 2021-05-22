@@ -5,13 +5,13 @@ export interface ModelInterface {
 export interface DataInterface {
 	id: number;
 	title: string;
-	imageUrl: string | number;
+	imageUrl: string;
 }
 
 export interface AnswersInterface {
 	id: number;
 	title: string;
-	image: string | number;
+	image: string;
 	isRight: boolean;
 }
 
@@ -29,17 +29,17 @@ export class Questions {
 			{
 				id: 1,
 				title: "How many legs has cat?",
-				imageUrl: "https://cats.com",
+				imageUrl: "./cat.jpg",
 			},
 			{
 				id: 2,
 				title: "How many legs has dog?",
-				imageUrl: "https://cats.com",
+				imageUrl: "./cat.jpg",
 			},
 			{
 				id: 3,
 				title: "How many legs has dinosaurs?",
-				imageUrl: "https://cats.com",
+				imageUrl: "./cat.jpg",
 			},
 			{
 				id: 4,
@@ -61,25 +61,25 @@ export class Model {
 				{
 					id: 1,
 					title: "How many",
-					image: "https://image.com",
+					image: "./cat_2.jpg",
 					isRight: true,
 				},
 				{
 					id: 2,
 					title: "How many",
-					image: "https://image.com",
+					image: "cat_2.jpg",
 					isRight: false,
 				},
 				{
 					id: 3,
 					title: "How many",
-					image: "https://image.com",
+					image: "cat.jpg",
 					isRight: false,
 				},
 				{
 					id: 4,
 					title: "How many",
-					image: "https://image.com",
+					image: "./cat.jpg",
 					isRight: false,
 				},
 			],
